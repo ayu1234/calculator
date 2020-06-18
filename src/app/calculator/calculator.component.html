@@ -1,0 +1,16 @@
+<div class="mainDiv">
+    <div class="flex-container">
+        <div class="screen">
+            <span *ngFor="let value of completeArray"><span *ngIf="value != '='">{{value}}</span></span>
+        </div>
+    </div>
+    <div class="flex-container">
+        <div class="operand-container">
+            <div *ngFor ="let num of number" (click) = "addValue(num)">{{num}}</div>
+        </div>
+        <div class="operator-container">
+            <div *ngFor ="let val of operatorValues" (click) = "addValue(val)">{{val}}</div>
+        </div>
+    </div>
+
+</div>
